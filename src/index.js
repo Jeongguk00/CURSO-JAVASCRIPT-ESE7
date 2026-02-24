@@ -1,26 +1,30 @@
-// calculadiora de presupuestos mensual
-// * registra ingresos y gastos
-// * calcula totales, balance
+// calculadiora que simula el presupuesto mensual
+// * permite registrar ingresos y gastos personales
+// * calcula totales y el balance final 
 // * Determina SUPERAVIT que es el saldo de la cuenta individual de vivienda del trabajador,
-//  que se utiliza para financiar la compra de una vivienda, construcción o mejora de la misma,
-//  o para pagar una hipoteca relacionada con la vivienda.
-//  EQUILIBRADO  y DEFICIT
+// el sistema indica si la persona tiene dinero sobrante (superávit),
+// si está en punto de equilibrio,
+// o si tiene pérdidas porque gasta más de lo que gana (déficit).
 
-// REQUISITOS FUNCIONALES
-// * Crear listas  Ingresos[] y Gastos[] con objetos {concepto, monto}
-// * Validar: monto debe ser numero finito > = 0
-// * Calcular: totalIngresos, totalGastos, balance
-// * Clasificar eStdo segun balance 
-// * Mostrar reporte en consola (TABLA + RESUMEN)
+// FUNCIONALIDADES DEL PROGRAMA
+// * Crear dos listas: una para ingresos y otra para gastos.
+// * Cada elemento debe tener un concepto y un monto.
+// * Validar que el monto sea un número válido y mayor o igual a cero.
+// * Calcular el total de ingresos y el total de gastos.
+// * Obtener el balance final.
+// * Mostrar un reporte organizado en la consola.
 
-"use strict"; // "use strict" es una directiva que se utiliza en JavaScript para activar el modo estricto, 
-// lo que ayuda a prevenir errores comunes y mejora la seguridad del código.
-//  Al usar "use strict", se aplican reglas más estrictas en la interpretación del código, 
-// lo que puede ayudar a detectar errores de manera más temprana y evitar comportamientos inesperados.
-
+"use strict"; 
+// Activo el modo estricto para que JavaScript sea más exigente.
+// Esto ayuda a evitar errores comunes, como usar variables sin declararlas.
+// También hace que el código sea más seguro y fácil de controlar.
+// Si hay algún problema, el programa lo detecta más rápido.
 /**
- * CONVIERTE A NUMERO Y VALIDA QUE SEA UN NUMERO FINITO MAYOR O IGUAL A CERO
- * lANZA UN ERROR SI LA VALIDACION FALLA
+ * EN ESTA PARTE CONVIERTO EL VALOR INGRESADO A NÚMERO
+ * Y VERIFICO QUE REALMENTE SEA UN NÚMERO VÁLIDO
+ * Y QUE NO SEA NEGATIVO.
+ * SI EL DATO NO CUMPLE ESAS CONDICIONES,
+ * EL PROGRAMA MUESTRA UN ERROR PARA EVITAR CÁLCULOS INCORRECTOS.
  */
 
 function validarMonto(monto) {
@@ -38,11 +42,10 @@ const ingresos = [
     { concepto: "Salario", monto: 5000000 },
     { concepto: "Freelance", monto: 1500000 },
 ];
-
 /**
- * lo anteriro crea una lista de ingresos 
+ * en esta parte creo una lista donde registro los ingresos.
+ * cada ingreso tiene un concepto y un monto.
  */
-
 const gastos = [
     { concepto: "Alquiler", monto: 1200000 },
     { concepto: "Comida", monto: 800000 },
