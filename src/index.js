@@ -1,4 +1,4 @@
-// calculadiora que simula el presupuesto mensual
+// calculadora que simula el presupuesto mensual
 // * permite registrar ingresos y gastos personales
 // * calcula totales y el balance final 
 // * Determina SUPERAVIT que es el saldo de la cuenta individual de vivienda del trabajador,
