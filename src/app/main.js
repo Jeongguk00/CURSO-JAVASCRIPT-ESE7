@@ -3,7 +3,7 @@
 const temperatura = ["c", "f", "k"];
 const longitud = ["m", "km", "cm"];
 
-// Función convertir
+// Aqui es la funcion de convertir
 function convertir(value, from, to) {
 
     let valor = Number(value);
